@@ -419,103 +419,6 @@
             position: relative;
             z-index: 2;
         }
-/* General Reset */
-body, h1, h2, p, button {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-.help-section {
-  padding: 50px 10%;
-  text-align: center;
-}
-
-.help-section h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #555;
-}
-
-.help-container {
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-.help-menu {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.menu-item {
-  padding: 15px 20px;
-  text-align: left;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.menu-item:hover {
-  background-color: #0056b3;
-  color: #fff;
-}
-
-.menu-item.active {
-  background-color: #00004d;
-  color: #fff;
-  font-weight: bold;
-}
-
-.help-content {
-  flex: 3;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.help-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.help-details h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.help-details p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .help-container {
-    flex-direction: column;
-  }
-
-  .help-image img {
-    max-width: 100%;
-  }
-}
 
         /* Content Section */
         .content-section {
@@ -575,7 +478,137 @@ body {
                 font-size: 2rem;
             }
 
+
         }
+  
+
+.container1 {
+  max-width: auto;
+  margin: 50px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  flex: 1;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #4ca1af;
+  color: #fff;
+}
+
+.menu-item.active {
+  background-color: #003366;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+}
+
+.main-content {
+  flex: 2;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+}
+
+.main-content h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.content-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.content-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .main-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 40px;
+  }
+}
+
     </style>
 
 </head>
@@ -691,66 +724,53 @@ body {
     </div>
 </section>
 
-
-  
-<section class="help-section">
-    <h1>We Can Help You With This Situation</h1>
-    <div class="help-container">
-      <div class="help-menu">
-        <button class="menu-item active" onclick="updateContent('Emergency Counselling', 'Psychological distress can disrupt the flow of everyday life...', 'emergency.jpg')">
-          Emergency Counselling
-        </button>
-        <button class="menu-item" onclick="updateContent('Relation Problem', 'Helping you navigate relationship challenges...', 'relation.jpg')">
-          Relation Problem
-        </button>
-        <button class="menu-item" onclick="updateContent('Couples Counseling', 'Improving communication and trust between couples...', 'couples.jpg')">
-          Couples Counseling
-        </button>
-        <button class="menu-item" onclick="updateContent('Depression Treatment', 'Support for overcoming depression and emotional health...', 'depression.jpg')">
-          Depression Treatment
-        </button>
-        <button class="menu-item" onclick="updateContent('Family Problem', 'Resolving family conflicts for stronger connections...', 'family.jpg')">
-          Family Problem
-        </button>
-        <button class="menu-item" onclick="updateContent('Personal Problem', 'Providing guidance for personal growth and clarity...', 'personal.jpg')">
-          Personal Problem
-        </button>
-        <button class="menu-item" onclick="updateContent('Business Problem', 'Strategic solutions to overcome business challenges...', 'business.jpg')">
-          Business Problem
-        </button>
+<div class="container1">
+    <h1 class="main-title">We Can Help You With This Situation</h1>
+    <div class="content-wrapper">
+      <div class="sidebar">
+        <button class="menu-item active" onclick="updateContent('Emergency Counselling', 'Psychological distress can disrupt the flow of everyday life...', 'pages/services-2.jpg', this)">Emergency Counselling</button>
+        <button class="menu-item" onclick="updateContent('Relation Problem', 'Issues with relationships and how to manage them effectively.', 'pages/services-0 (1).jpg', this)">Relation Problem</button>
+        <button class="menu-item" onclick="updateContent('Couples Counseling', 'Helping couples overcome challenges and build stronger bonds.', 'pages/services-1.jpg', this)">Couples Counseling</button>
+        <button class="menu-item" onclick="updateContent('Depression Treatment', 'Effective ways to handle depression and lead a fulfilling life.', 'pages/services-4.jpg', this)">Depression Treatment</button>
+        <button class="menu-item" onclick="updateContent('Family Problem', 'Resolving family conflicts to foster harmony.', 'pages/services-4.jpg', this)">Family Problem</button>
+        <button class="menu-item" onclick="updateContent('Personal Problem', 'Overcoming personal challenges with professional guidance.', 'pages/services-2.jpg', this)">Personal Problem</button>
+        <button class="menu-item" onclick="updateContent('Business Problem', 'Practical solutions to overcome business challenges.', 'pages/services-0 (2).jpg', this)">Business Problem</button>
       </div>
-      <div class="help-content">
-        <div class="help-image">
-          <img id="content-image" src="emergency.jpg" alt="Emergency Counselling" />
-        </div>
-        <div class="help-details">
-          <h2 id="content-title">Emergency Counselling</h2>
-          <p id="content-description">
-            Psychological distress can disrupt the flow of everyday life and lead to innumerable problems. A serious, conflicting, unexpected, or dangerous situation often requires immediate help from an expert which is known as ‘Emergency Counselling’.
-          </p>
-        </div>
+      <div class="main-content">
+        <h2 id="content-title">Emergency Counselling</h2>
+        <img id="content-image" src="pages\services-0 (1).jpg" alt="Emergency Counselling Image" class="content-image" onerror="handleImageError()">
+        <p id="content-description">Psychological distress can disrupt the flow of everyday life...</p>
       </div>
     </div>
-  </section>
+  </div>
+
   <script>
-    function updateContent(title, description, image) {
-      // Update content title
+    function updateContent(title, description, image, element) {
+      // Update the title
       document.getElementById('content-title').innerText = title;
-    
-      // Update content description
+
+      // Update the description
       document.getElementById('content-description').innerText = description;
-    
-      // Update image
-      document.getElementById('content-image').src = image;
-    
-      // Highlight active menu item
+
+      // Update the image
+      const imageElement = document.getElementById('content-image');
+      imageElement.src = image;
+      imageElement.alt = title; // Update the alt text for accessibility
+
+      // Highlight the active menu item
       const menuItems = document.querySelectorAll('.menu-item');
       menuItems.forEach(item => item.classList.remove('active'));
-      event.target.classList.add('active');
-    }
-    </script>
-    </body>
-    
 
+      // Add 'active' class to the clicked menu item
+      element.classList.add('active');
+    }
+
+    function handleImageError() {
+      const imageElement = document.getElementById('content-image');
+      console.error(`Image not found: ${imageElement.src}`);
+      imageElement.src = 'images/default.jpg'; // Fallback image
+      imageElement.alt = 'Default Image';
+    }
+  </script>
 </body>
 </html>

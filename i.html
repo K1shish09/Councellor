@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counselling Services</title>
+  <link rel="stylesheet" href="style.css">
+ 
+<style>
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="main-title">We Can Help You With This Situation</h1>
+    <div class="content-wrapper">
+      <div class="sidebar">
+        <button class="menu-item active" onclick="updateContent('Emergency Counselling', 'Psychological distress can disrupt the flow of everyday life...', 'pages/services-2.jpg', this)">Emergency Counselling</button>
+        <button class="menu-item" onclick="updateContent('Relation Problem', 'Issues with relationships and how to manage them effectively.', 'pages/services-0 (1).jpg', this)">Relation Problem</button>
+        <button class="menu-item" onclick="updateContent('Couples Counseling', 'Helping couples overcome challenges and build stronger bonds.', 'pages/services-1.jpg', this)">Couples Counseling</button>
+        <button class="menu-item" onclick="updateContent('Depression Treatment', 'Effective ways to handle depression and lead a fulfilling life.', 'pages/services-4.jpg', this)">Depression Treatment</button>
+        <button class="menu-item" onclick="updateContent('Family Problem', 'Resolving family conflicts to foster harmony.', 'pages/services-4.jpg', this)">Family Problem</button>
+        <button class="menu-item" onclick="updateContent('Personal Problem', 'Overcoming personal challenges with professional guidance.', 'pages/services-2.jpg', this)">Personal Problem</button>
+        <button class="menu-item" onclick="updateContent('Business Problem', 'Practical solutions to overcome business challenges.', 'pages/services-0 (2).jpg', this)">Business Problem</button>
+      </div>
+      <div class="main-content">
+        <h2 id="content-title">Emergency Counselling</h2>
+        <img id="content-image" src="pages\services-0 (1).jpg" alt="Emergency Counselling Image" class="content-image" onerror="handleImageError()">
+        <p id="content-description">Psychological distress can disrupt the flow of everyday life...</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateContent(title, description, image, element) {
+      // Update the title
+      document.getElementById('content-title').innerText = title;
+
+      // Update the description
+      document.getElementById('content-description').innerText = description;
+
+      // Update the image
+      const imageElement = document.getElementById('content-image');
+      imageElement.src = image;
+      imageElement.alt = title; // Update the alt text for accessibility
+
+      // Highlight the active menu item
+      const menuItems = document.querySelectorAll('.menu-item');
+      menuItems.forEach(item => item.classList.remove('active'));
+
+      // Add 'active' class to the clicked menu item
+      element.classList.add('active');
+    }
+
+    function handleImageError() {
+      const imageElement = document.getElementById('content-image');
+      console.error(`Image not found: ${imageElement.src}`);
+      imageElement.src = 'images/default.jpg'; // Fallback image
+      imageElement.alt = 'Default Image';
+    }
+  </script>
+</body>
+</html>
