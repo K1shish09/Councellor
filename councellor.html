@@ -10,6 +10,48 @@
     <title>Document</title>
     <style>
         
+        .hero-section {
+    position: relative;
+    height: 100vh; /* Full screen height */
+    background: url('./pages/bg.jpg') no-repeat center center/cover; /* Replace 'your-image-url.jpg' with your image URL */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-btn {
+            background: #ffcc00; /* Accent color */
+            color: #2c3e50; /* Dark text color */
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background: #2c3e50;
+            color: #fff;
+        }
 /* Review Section */
 .review-section {
   background: linear-gradient(135deg, #4ca1af, #2c3e50); /* Added gradient for a dynamic look */
