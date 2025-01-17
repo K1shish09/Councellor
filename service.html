@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        
+/* Navbar Container */
+.navbar {
+    width: 97%;
+    height: 80px;
+
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3)
+     0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color:   rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    position: absolute;
+    opacity: 1;
+    z-index: 1000;
+}
+
+/* Brand Styling */
+.brand {
+    display: flex;
+    align-items: center;
+    
+}
+
+.brand-name {
+    width: 150px;
+    height: auto;
+    margin-left: 160px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    display: none;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    margin-left: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    color: #ffdd57;
+    transform: scale(1.2);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    
+    width: 60%;
+    margin-left:30px;
+  
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 70px;
+    border-radius: 5px;
+    text-shadow: 3px 3px  8px white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block;
+        margin-left: 5px;
+    }
+ .navbar{
+    position: relative;
+ }
+ .brand-name{
+  margin-left:10px ;
+ }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        padding: 15px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+/* navbar css ends here */
+
+.background {
+    width: 100%;
+    height: 800px;
+    
+}
+
+.bg-img {
+    width: 100%;
+    height: 750px;
+}
+
+.img-text {
+ 
+    text-align: center;
+    background-image: linear-gradient(orange,white,green);
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    font-weight: bolder;
+    text-shadow: 
+    1px 1px 0 rgb(95, 95, 236), /* Light shadow */
+    2px 2px 0 rgb(17, 17, 17), /* Medium shadow */
+    3px 3px 0 rgb(245, 241, 241), /* Darker shadow */
+    4px 4px 5px bisque;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+    position: absolute; 
+    top:45%; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%); 
+    z-index: 10; 
+}
+
+.img-text1 {
+    text-align: center;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    font-weight: bolder;
+    text-shadow: 
+    1px 1px 0 rgb(95, 95, 236), /* Light shadow */
+   /* Medium shadow */
+    3px 3px 0 rgb(245, 241, 241), /* Darker shadow */
+    4px 4px 5px bisque;
+    -webkit-background-clip: text;
+  
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 10;
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .background {
+        height: 400px;
+    }
+
+    .bg-img {
+        height: 500px;
+    }
+
+    .img-text {
+        font-size: 35px;
+        text-align: center;
+        top: 50%;
+        margin-left: 20px;
+    }
+
+    .img-text1 {
+        font-size: 20px;
+        top: 70%;
+        margin-left: 20px;
+    }
+}
+
+/*         
+        .navbar {
+            background-color: #003366; 
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-size: 1.1rem;
+            margin-right: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffcc00 !important;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
+        .navbar-toggler-icon {
+            background-color: white;
+        }
+
+        */
+       
+        /* Services Section */
+        .services-section {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .services-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .service-card img {
+            width: 60px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .service-card {
+                width: 90%;
+            }
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            background-color: #f2f2f2;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #003366;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .step-card {
+            background: #a3b3c4;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background: #e0f7fa;
+        }
+
+        .step-card img {
+            width: 50px;
+            margin-bottom: 15px;
+        }
+
+        .step-card .step-number {
+            background: #003366;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .step-card h3 {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .offer-section {
+    background: linear-gradient(135deg, #4ca1af, #2c3e50);
+    color: white;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-section::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.offer-section::after {
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    right: -70px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.offer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.section-divider {
+    width: 100px;
+    height: 4px;
+    background-color: #ffcc00;
+    margin-bottom: 30px;
+  padding: 0;
+}
+/* What We Offer Section */
+.offer-section {
+    background: linear-gradient(135deg, #4ca1af, #2c3e50);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.offer-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 30px;
+}
+
+.offer-content {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    max-width: 500px;
+}
+
+.offer-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.offer-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.offer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.offer-content ul li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #f1f1f1;
+}
+
+.offer-content ul li::before {
+    content: "✔";
+    color: #ffcc00;
+    font-size: 1.6rem;
+    margin-right: 15px;
+}
+
+.offer-image {
+    flex: 1;
+    text-align: center;
+    max-width: 500px;
+}
+
+.offer-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.offer-image img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .offer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .offer-image {
+        margin-top: 20px;
+    }
+}
+
+
+        @media (max-width: 768px) {
+            .step-card {
+                width: 150px;
+                height: 150px;
+            }
+
+            .step-card h3 {
+                font-size: 1rem;
+            }
+            
+
+            .step-card .step-number {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+        }
+        
+    /* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('./pages/bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.btn-play {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: transparent;
+    padding: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.btn-play:hover {
+    background: #ffffff;
+    color: #003366;
+}
+
+/* Video Modal */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 40;
+    left: 50;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background: #000;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+   
+
+
+       
+        /* Content Section */
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        .content-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-section ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .content-section ul li::before {
+            content: '✔';
+            color: #4fa3f7;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .content-section h2 {
+                font-size: 2rem;
+            }
+
+
+        }
+  
+
+.container1 {
+  max-width: auto;
+  margin-top: 10px;
+  padding: 20px;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 1px rgba(0, 0, 0, 0.2);
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  flex: 1;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #4ca1af;
+  color: #fff;
+}
+
+.menu-item.active {
+  background-color: #003366;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+}
+
+.main-content {
+  flex: 2;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: white;
+}
+
+.main-content h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.content-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  max-height: 300px;
+}
+
+.content-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .main-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 40px;
+  }
+}
+
+/* Review Section */
+.review-section {
+  background: linear-gradient(135deg, #4ca1af, #2c3e50); /* Added gradient for a dynamic look */
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.review-section::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.review-section::after {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  right: -70px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.section-titles {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  z-index: 2;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  z-index: 2;
+}
+
+.review
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    width: 80%;
+  }
+}
+/* Footer Section */
+.footer {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Matching theme */
+  color: white;
+  margin-top: 10px;
+  padding-top: 30px;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffcc00; /* Accent color */
+  text-transform: uppercase;
+}
+
+.footer p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffcc00; /* Hover color */
+}
+
+/* About Us Section */
+.footer-about {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Quick Links Section */
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li i {
+  margin-right: 10px;
+}
+
+/* Contact Section */
+.footer-contact {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.footer-socials .social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials .social-link i {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.footer-socials .social-link:hover {
+  background: #ffcc00;
+  transform: scale(1.1);
+  color: #2c3e50;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-about, .footer-links, .footer-contact {
+    margin-bottom: 20px;
+  }
+}
+
+    </style>
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="brand">
+      <img src="./pages/logo.png" class="brand-name">
+    </div>
+    <div class="toggle-btn" id="toggle-btn">&#9776;</div>
+    <div class="nav-links" id="nav-links">
+      <a href="./index.html" class="login">Home</a>
+      <a href="./about.html" class="login">About</a>
+      <a href="./councellor.html" class="login">Counselor</a>
+      <a href="#box4" class="login">Services</a>
+      <a href="#box4" class="login">Blog</a>
+      <a href="./contact.html" class="login">Contact</a>
+    </div>
+  </nav>
+  
+  <script>
+    const toggleBtn = document.getElementById('toggle-btn');
+    const navLinks = document.getElementById('nav-links');
+  
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  <!-- background -->
+    <div class="background">
+        <img src="./pages/bg.jpg" class="bg-img">
+        <h1 class="img-text">Counselling Services</h1><br>
+        <p class="img-text1">Using Psychodynamic Approaches For Well-Being and Life Satisfaction.</p>
+       
+    </div><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+       
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <img src="https://img.icons8.com/ios-filled/50/003366/calendar.png" alt="Schedule">
+                <h3>Make Schedule</h3>
+            </div>
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <img src="https://img.icons8.com/ios-filled/50/003366/speech-bubble.png" alt="Discussion">
+                <h3>Start Discussion</h3>
+            </div>
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <img src="https://img.icons8.com/ios-filled/50/003366/checklist.png" alt="Plan">
+                <h3>Enjoy Plan</h3>
+            </div>
+        </div>
+    </section>
+
+  
+     <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+    .review-section {
+        background: linear-gradient(135deg, #4ca1af, #2c3e50);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+    }
+    .section-titles {
+        font-size: 2.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    .review-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    .review-card {
+        background: white;
+        color: #333;
+        padding: 30px;
+        width: 300px;
+        text-align: left;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        position: relative;
+    }
+    .review-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+        margin-bottom: 15px;
+    }
+    .review-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    }
+    .review-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .review-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    .highlight {
+        background: #4ca1af;
+        color: white;
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        border-radius: 12px;
+        display: inline-block;
+    }
+    .review-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 100%;
+        background: linear-gradient(to bottom, #4ca1af, #2c3e50);
+        border-radius: 15px 0 0 15px;
+    }
+</style>
+</head>
+<body>
+<section class="review-section">
+    <h2 class="section-titles">Counselling Services</h2>
+    <div class="review-container">
+        <!-- Personal Counselling -->
+        <div class="review-card">
+            <img src="./pages/s.jpg"  alt="personal Counselling">
+            <h3 class="review-title">Personal Counselling</h3>
+            <p class="review-text">Maybe you are going through some difficulties and you are not getting help from your usual sources. You think they could be judgemental or they won't understand you. You find yourself anxious and hard to understand the specific concern they are experiencing, identify their strengths and to determine the directions they need to take in order to address the concern.</p>
+            <span class="highlight">Tailored for you</span>
+        </div>
+        <!-- Depression Treatment -->
+        <div class="review-card">
+            <img src="pages\services-3 (1).jpg"                alt="Depression Treatment">
+            <h3 class="review-title">Depression Treatment</h3>
+            <p class="review-text">Depression is a serious mood disorder. It affects how you think, feel, interact with people, and makes your day-to-day life more difficult. But don't worry; it is highly treatable and can happen at any age. We focus on present thoughts, feelings, and behaviors to help you recover.</p>
+            <span class="highlight">Your mental health matters</span>
+        </div>
+        <!-- Business Counselling -->
+        <div class="review-card">
+            <img src="pages\services-6.jpg"             alt="Business Counselling">
+            <h3 class="review-title">Business Counselling</h3>
+            <p class="review-text">Work stress is starting to impact your personal life—causing sleep deprivation, dread, anxiety, and bad habits like drinking, smoking, or overeating. We will help you understand the root cause of what's getting in the way of a happy life and develop strategies to overcome them.</p>
+            <span class="highlight">Balance your life</span>
+        </div>
+        <!-- Relationship Counselling -->
+        <div class="review-card">
+            <img src="pages\services-1.jpg"hip Counselling">
+            <h3 class="review-title">Relationship Counselling</h3>
+            <p class="review-text">We provide an environment to help you identify issues or problems in a relationship and find a way through those difficulties. We support you with small or major relationship issues that are troubling you, helping to bond the relationship strong.</p>
+            <span class="highlight">Strengthen bonds</span>
+        </div>
+        <!-- Couple Counselling -->
+        <div class="review-card">
+            <img src="pages\services-2 (1).jpg">
+            <h3 class="review-title">Couple Counselling</h3>
+            <p class="review-text">Couple counselling helps you interact and explore intimacy, conflicts, communication, etc., with your partner. Some couples seek marriage counseling to strengthen their partnership and gain a better understanding of each other.</p>
+            <span class="highlight">For a stronger connection</span>
+        </div>
+        <!-- Family Counselling -->
+        <div class="review-card">
+            <img src="pages\services-4.jpg"Family Counselling">
+            <h3 class="review-title">Family Counselling</h3>
+            <p class="review-text">No family is perfect; we argue, we fight. We even stop talking to each other at times. But in the end, family is family; the love is always there. Family counselling is a service available to anyone struggling to cope with family or relationship issues. The service is open to individuals, couples, and families.</p>
+            <span class="highlight">Family first</span>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+
+  
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- About Us Section -->
+      <div class="footer-about">
+        <h3>About Us</h3>
+        <p>
+          At Positive World
+          , we are dedicated to providing the highest quality support for mental health and personal growth. Our team of compassionate professionals is here to help you overcome life's challenges with care and guidance.
+        </p>
+      </div>
+      <!-- Quick Links Section -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+          <li><a href="#reviews"><i class="fas fa-comments"></i> Testimonials</a></li>
+          <li><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+          <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQs</a></li>
+        </ul>
+      </div>
+      <!-- Contact Section -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p><strong>Address:</strong> Address: House no. 2632, Top Floor, Sector-69, Near Gurukul world school, Mohali
+        <p><strong>Email:</strong> <a href="Email: info@positiveworldcounselling.com"></a>
+        <p><strong>Phone:</strong> <a href="tel:+1234567890">Phone: +91 7087306000
+        <div class="footer-socials">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Counseling Website. All Rights Reserved. Designed with care by [Your Company Name].</p>
+    </div>
+  </footer>
+  
+</body>
+</html>
