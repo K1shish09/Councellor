@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Counselling Services</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .review-section {
+            background: linear-gradient(135deg, #4ca1af, #2c3e50);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .section-titles {
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .review-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .review-card {
+            background: white;
+            color: #333;
+            padding: 30px;
+            width: 300px;
+            text-align: left;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        .review-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: 15px;
+        }
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+        .review-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .review-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            background: #4ca1af;
+            color: white;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+        .review-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 100%;
+            background: linear-gradient(to bottom, #4ca1af, #2c3e50);
+            border-radius: 15px 0 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <section class="review-section">
+        <h2 class="section-titles">Counselling Services</h2>
+        <div class="review-container">
+            <!-- Personal Counselling -->
+            <div class="review-card">
+                <img src="https://via.placeholder.com/300x150" alt="Personal Counselling">
+                <h3 class="review-title">Personal Counselling</h3>
+                <p class="review-text">Maybe you are going through some difficulties and you are not getting help from your usual sources. You think they could be biased/judgemental or they won't understand you. You find yourself anxious and hard to understand.</p>
+                <span class="highlight">Tailored for you</span>
+            </div>
+            <!-- Depression Treatment -->
+            <div class="review-card">
+                <img src="https://via.placeholder.com/300x150" alt="Depression Treatment">
+                <h3 class="review-title">Depression Treatment</h3>
+                <p class="review-text">Depression is a serious mood disorder. It affects how you think, feel, interact with people, and makes your day-to-day life more difficult. But don't worry; it is highly treatable and can happen at any age. We focus on present thoughts, feelings, and behaviors to help you recover.</p>
+                <span class="highlight">Your mental health matters</span>
+            </div>
+            <!-- Business Counselling -->
+            <div class="review-card">
+                <img src="https://via.placeholder.com/300x150" alt="Business Counselling">
+                <h3 class="review-title">Business Counselling</h3>
+                <p class="review-text">Work stress is starting to impact your personal life—causing sleep deprivation, dread, anxiety, and bad habits like drinking, smoking, or overeating. We will help you understand the root cause of what's getting in the way of a happy life and develop strategies to overcome them.</p>
+                <span class="highlight">Balance your life</span>
+            </div>
+            <!-- Relationship Counselling -->
+            <div class="review-card">
+                <img src="https://via.placeholder.com/300x150" alt="Relationship Counselling">
+                <h3 class="review-title">Relationship Counselling</h3>
+                <p class="review-text">We provide an environment to help you identify issues or problems in a relationship and find a way through those difficulties. We support you with small or major relationship issues that are troubling you, helping to bond the relationship strong.</p>
+                <span class="highlight">Strengthen bonds</span>
+            </div>
+            <!-- Couple Counselling -->
+            <div class="review-card">
+                <img src="https://via.placeholder.com/300x150" alt="Couple Counselling">
+                <h3 class="review-title">Couple Counselling</h3>
+                <p class="review-text">Couple counselling helps you interact and explore intimacy, conflicts, communication, etc., with your partner. Some couples seek marriage counseling to strengthen their partnership and gain a better understanding of each other.</p>
+                <span class="highlight">For a stronger connection</span>
+            </div>
+            <!-- Family Counselling -->
+            <div class="review-card">
+                <img src="https://via.placeholder.com/300x150" alt="Family Counselling">
+                <h3 class="review-title">Family Counselling</h3>
+                <p class="review-text">No family is perfect; we argue, we fight. We even stop talking to each other at times. But in the end, family is family; the love is always there. Family counselling is a service available to anyone struggling to cope with family or relationship issues. The service is open to individuals, couples, and families.</p>
+                <span class="highlight">Family first</span>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
