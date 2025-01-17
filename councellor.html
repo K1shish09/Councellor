@@ -9,7 +9,123 @@
     
     <title>Document</title>
     <style>
-        
+              
+/* Navbar Container */
+.navbar {
+    width: 97%;
+    height: 80px;
+
+    border-radius: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3)
+     0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-color:   rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    position: absolute;
+    opacity: 1;
+    z-index: 1000;
+}
+
+/* Brand Styling */
+.brand {
+    display: flex;
+    align-items: center;
+    
+}
+
+.brand-name {
+    width: 150px;
+    height: auto;
+    margin-left: 160px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    display: none;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    margin-left: 30px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    color: #ffdd57;
+    transform: scale(1.2);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    
+    width: 60%;
+    margin-left:30px;
+  
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a {
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 70px;
+    border-radius: 5px;
+    text-shadow: 3px 3px  8px white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block;
+        margin-left: 5px;
+    }
+ .navbar{
+    position: relative;
+ }
+ .brand-name{
+  margin-left:10px ;
+ }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        padding: 15px 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
         .hero-section {
     position: relative;
     height: 100vh; /* Full screen height */
@@ -294,6 +410,21 @@
 }
 
     </style>
+    
+  <nav class="navbar">
+    <div class="brand">
+      <img src="./pages/logo.png" class="brand-name">
+    </div>
+    <div class="toggle-btn" id="toggle-btn">&#9776;</div>
+    <div class="nav-links" id="nav-links">
+      <a href="./index.html" class="login">Home</a>
+      <a href="./about.html" class="login">About</a>
+      <a href="./councellor.html" class="login">Counselor</a>
+      <a href="./service.html" class="login">Services</a>
+      <a href="#box4" class="login">Blog</a>
+      <a href="./contact.html" class="login">Contact</a>
+    </div>
+  </nav>
        <!-- Hero Section -->
        <section class="hero-section">
         <div class="hero-overlay"></div>
