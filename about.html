@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./pages/about.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  
+
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="brand">
+          <img src="./pages/logo.png" class="brand-name">
+        </div>
+        <div class="toggle-btn" id="toggle-btn">&#9776;</div>
+        <div class="nav-links" id="nav-links">
+          <a href="./index.html" class="login">Home</a>
+          <a href="./about.html" class="login">About</a>
+          <a href="./councellor.html" class="login">Counselor</a>
+          <a href="#box4" class="login">Services</a>
+          <a href="#box4" class="login">Blog</a>
+          <a href="./contact.html" class="login">Contact</a>
+        </div>
+      </nav>
+      
+      <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const navLinks = document.getElementById('nav-links');
+      
+        toggleBtn.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      </script>
+      <!-- background -->
+        <div class="background">
+            <img src="./pages/about.jpg" class="bg-img">
+            <h1 class="img-text">About Us </h1><br><br>
+<!-- 
+    about section -->
+    <section class="offer-section">
+        <div class="offer-container">
+            <div class="offer-content">
+                <h2>What We Offer</h2>
+                <p>
+                    At <strong>The Positive World</strong>, we provide personal, educational, career, and pre-post marital counseling.
+                    Our expert team addresses various issues including depression, family problems, relationship challenges, 
+                    and the difficulties of aging.
+                </p>
+                <ul>
+                    <li><i class="icon-check"></i> Professional psychotherapy and counseling</li>
+                    <li><i class="icon-check"></i> Confidential and secure services</li>
+                    <li><i class="icon-check"></i> Tailored, one-on-one sessions</li>
+                    <li><i class="icon-check"></i> Solutions for depression, love issues, and family conflicts</li>
+                </ul>
+            </div>
+            <div class="offer-image">
+                <img src="./pages/about-2.jpg" alt="What We Offer">
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <!-- numbers section -->
+    <section class="services-section">
+       
+        <div class="services-container">
+            <div class="service-card">
+               
+                <h3>3,000</h3>
+                <p>Our Satisfied and happy Customers .</p>
+            </div>
+            <div class="service-card">
+             
+                <h3>15</h3>
+                <p>Years of Experience in Business.</p>
+            </div>
+            <div class="service-card">
+              
+                <h3>3</h3>
+                <p>Our Qualified Counselor.</p>
+            </div>
+            <div class="service-card">
+             
+                <h3>40</h3>
+                <p>Services Points.</p>
+            </div>
+        </div>
+    </section>
+<br><br>
+<section class="testimonial-section">
+    <div class="heading">
+        <h1>Testimonial</h1>
+        <p>Sometimes all you need is someone willing to listen to you without judging.</p>
+        <p>Read how a small session can create a big difference in your life, from our clients.</p>
+    </div>
+    <div class="testimonial-slider">
+        <div class="testimonial-card">
+            <p>The counsellor is highly qualified ,experienced and having sound</p>
+            <div class="user">
+                <img src="./pages/Hemant Bhatt.jpg" alt="User Image">
+                <h3>Hemant Bhatt</h3>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p>4 Stars</p>
+            <div class="user">
+                <img src="./pages/Gurpreet Singh (2).jpg" alt="User Image">
+                <h3>Gurpreet Singh</h3>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p>It is highly recommended and highly beneficial .</p>
+            <div class="user">
+                <img src="./pages/Neha Nijhawan.jpg" alt="User Image">
+                <h3>Neha Nijhawan</h3>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <p>I personally recommend "The Positive World"</p>
+            <div class="user">
+                <img src="./pages/Meghna Kashmiri (1).jpg" alt="User Image">
+                <h3>Meghna Kashmiri</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="./about.js"></script><br><br>
+ <!-- form -->
+ <div class="background-1">
+    <img src="./pages/bg_8.jpg" class="bg1-img">
+  
+ <section class="contact-form-section">
+    <h2>Send a Message and Get in Touch</h2>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="service">Service</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Select a service</option>
+          <option value="counseling">Relation Problem</option>
+          <option value="therapy">Couple Councelling</option>
+          <option value="workshops">Depression Treatment</option>
+          <option value="consultation">Family Problem</option>
+          <option value="consultation">Personal Problem</option>
+          <option value="consultation">Business Problem</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </section><br><br><br>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- About Us Section -->
+          <div class="footer-about">
+            <h3>About Us</h3>
+            <p>
+              At Positive World
+              , we are dedicated to providing the highest quality support for mental health and personal growth. Our team of compassionate professionals is here to help you overcome life's challenges with care and guidance.
+            </p>
+          </div>
+          <!-- Quick Links Section -->
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+              <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+              <li><a href="#reviews"><i class="fas fa-comments"></i> Testimonials</a></li>
+              <li><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+              <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQs</a></li>
+            </ul>
+          </div>
+          <!-- Contact Section -->
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p><strong>Address:</strong> Address: House no. 2632, Top Floor, Sector-69, Near Gurukul world school, Mohali
+            <p><strong>Email:</strong> <a href="Email: info@positiveworldcounselling.com"></a>
+            <p><strong>Phone:</strong> <a href="tel:+1234567890">Phone: +91 7087306000
+            <div class="footer-socials">
+              <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>&copy; 2025 Counseling Website. All Rights Reserved. Designed with care by [Your Company Name].</p>
+        </div>
+      </footer>
+      
+</body>
+</html>
